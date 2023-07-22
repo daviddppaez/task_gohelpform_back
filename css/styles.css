@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.gohelp-nav {
+    background: cadetblue;
+    height: 75px;
+    width: 100vw;
+}
+
+.gohelp-nav h1 {
+    display: inline-block;
+    color: white;
+    padding: 10px 25px;
+}
+
+.gohelp-links {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.gohelp-links a {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+    height: 75px;
+    padding: 25px;
+}
+
+.gohelp-links a:hover {
+    background: white;
+    color: black;
+}
+
+.gohelp-section {vertical-align: top; display: inline-block; padding: 50px 100px; width: 49%;}
+.gohelp-section img {height: 100%; max-height: 400px; float: right;}
+.gohelp-section h2 {font-size: 24px; padding-bottom: 20px;}
+.gohelp-section p {font-size: 18px;}
+.gohelp-section a { color: black; text-decoration: none;}
+
+.button-page {
+    width: 500px;
+    height: 75px;
+    margin: 20px 0;
+    transition: 0.5s;
+
+}
+
+.button-page p {
+    padding: 20px;
+}
+
+.animation-button {
+    vertical-align: top;
+    position: absolute;
+    z-index: -1;
+    width: 10px;
+    height: 75px;
+    display: inline-block;
+    background: cadetblue;
+    transition: 0.5s;
+}
+
+.button-page:hover {
+    color: white;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.button-page:hover .animation-button {
+    width: 500px;
+    height: 75px;
+    display: inline-block;
+    transition: 0.25s;
+}
+
+
+
+/* Generalidades del Footer*/
+.gohelp-footer {
+    padding: 20px 10vw;
+}
+
+.gohelp-footer img{
+    display: inline-block;
+    height: 100px;
+    padding: 10px;
+}
+
+
+/* Estilo de formularios*/
+
+.gohelp-form{ background: cadetblue; min-height: 100vh; overflow: hidden;}
+.gohelp-form h1 { display: inline-block; margin-left: 25px; padding: 15px; font-size: 20px; color: white; }
+
+.gohelp-navform {
+    vertical-align: top;
+    display: inline-block;
+    margin: 5px;
+    padding: 7px;
+    height: 30px;
+    width: 150px;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    transition: 0.5s;
+}
+
+.gohelp-navform p {
+    position: absolute;
+    padding: 7px;
+}
+
+.gohelp-navformanimation {
+    background: white;
+    position: absolute;
+    width: 0;
+    height: 30px;
+    transition: 0.5s;
+}
+.gohelp-navform:hover { color: black; transition: 0.25s;}
+.gohelp-navform:hover .gohelp-navformanimation { width: 150px; transition: 0.25s;}
+
+#contact_form {
+    background: rgba(0, 0, 0, 0.25);
+    margin: 0 25px 25px;
+    padding: 25px;
+    border-left: 5px solid white;
+    color: white;
+}
+
+.gohelp-formceld {
+    padding: 25px;
+}
+
+.gohelp-formceld input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .gohelp-formceld input[type=submit] {
+    width: 100%;
+    background-color: cadetblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #contact_form table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  #contact_form table td, #contact_form table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #contact_form table tr:hover {background-color: rgba(0,0,0,0.25);}
+  
+  #contact_form table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: cadetblue;
+    color: white;
+  }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Formulario del Profesional</title>
+</head>
+<body>
+    <div class="gohelp-form">
+
+        <h1>gohelp</h1>
+
+            <a href="gohelp_index.html"><div class="gohelp-navform">
+                <div class="gohelp-navformanimation"></div>
+                <p>Vuelve al inicio</p>
+            </div></a>
+
+            <a href="gohelp_doctorlist.html"><div class="gohelp-navform">
+                <div class="gohelp-navformanimation"></div>
+                <p>Ver doctores registrados</p>
+            </div></a>
+
+    <form id="contact_form">
+
+        <h2>Formulario del Profesional</h2>
+
+        <div class="gohelp-formceld">
+        <label for="name">Nombres Completos</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <i><small>Agrega tus nombres, recuerda iniciar en mayúscula</small></i><br>
+            </div>
+
+        <div class="gohelp-formceld">        
+        <label for="surname">Apellidos Completos</label><br>
+        <input type="text" id="surname" name="surname" required><br>
+        <i><small>Agrega tus apellidos, recuerda iniciar en mayúscula</small></i><br>
+            </div>
+
+        <div class="gohelp-formceld">
+        <label for="site">Consultorio</label><br>
+        <input type="text" id="site" name="site" required><br>
+        <i><small>Solo números, tres cifras</small></i><br>
+            </div>
+
+        <div class="gohelp-formceld">
+        <label for="email">Correo Electrónico</label><br>
+        <input type="text" id="email" name="email" required><br>
+        <i><small>Coloca un correo electrónico válido</small></i><br>
+            </div>
+
+        <div class="gohelp-formceld">
+        <label for="think">Especialidad</label><br>
+        <select name="think" id="think">
+          <option value="medgen">Medicina General</option>
+          <option value="cardio">Cardiología</option>
+          <option value="medint">Medicina Interna</option>
+          <option value="rehfis">Rehabilitación Física</option>
+          <option value="psicol">Sicología</option>
+          <option value="odonto">Odontología</option>
+          <option value="radiol">Radiología</option>
+        </select><br>
+        <i><small>Selecciona la especialidad que atiendes</small></i><br>
+            </div>
+
+        <div class="gohelp-formceld">
+        <input class="button_submit" id="button_submit" type="submit" name="action" value="Registrar Profesional">
+            </div>
+
+    </div>
+  
+    <script src="gohelp_scriptdoctor.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Agendamiento de Citas | GoHelp</title>
+</head>
+<body>
+    <div class="gohelp-form">
+
+        <h1>gohelp</h1>
+
+            <a href="gohelp_index.html"><div class="gohelp-navform">
+                <div class="gohelp-navformanimation"></div>
+                <p>Vuelve al inicio</p>
+            </div></a>
+
+            <a href="gohelp_selectlist.html"><div class="gohelp-navform">
+                <div class="gohelp-navformanimation"></div>
+                <p>Ver citas asignadas</p>
+            </div></a>
+
+    <form id="contact_form">
+
+        <h2>Asigna tu cita médica prioritaria</h2>
+
+        <div class="gohelp-formceld">
+        <label for="id">Identificación</label><br>
+        <input type="text" id="id" name="id" required><br>
+        <i><small>Recuerda colocar el número de identificación sin ningún caracter especial</small></i><br>
+            </div>
+
+        <div class="gohelp-formceld">
+        <label for="think">Especialidad Requerida</label><br>
+        <select name="think" id="think">
+          <option value="medgen">Medicina General</option>
+          <option value="cardio">Cardiología</option>
+          <option value="medint">Medicina Interna</option>
+          <option value="rehfis">Rehabilitación Física</option>
+          <option value="psicol">Sicología</option>
+          <option value="odonto">Odontología</option>
+          <option value="radiol">Radiología</option>
+        </select><br>
+        <i><small>Selecciona la especialidad que requieres para atenderte</small></i><br>
+            </div>
+
+        <div class="gohelp-formceld">
+        <input class="button_submit" id="button_submit" type="submit" name="action" value="Solicitar cita">
+            </div>
+
+    </div>
+  
+    <script src="gohelp_scriptselect.js"></script>
+
+</body>
+</html>

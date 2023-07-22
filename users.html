@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de datos del formulario</title>
+</head>
+<body>
+  <h1>Lista de datos del formulario</h1>
+  <div id="datos"></div>
+
+  <script>
+    // Función para obtener los datos desde la REST API
+    async function obtenerDatos() {
+      try {
+        const response = await fetch('http://localhost:3000/formulario');
+        const data = await response.json();
+
+        // Generar la tabla con los datos recibidos
+        let tabla = '<table border="1">';
+        tabla += '<tr><th>Nombre</th><th>Email</th><th>Mensaje</th></tr>';
+
+        data.forEach((registro) => {
+          tabla += `<tr><td>${registro.nombre}</td><td>${registro.email}</td><td>${registro.mensaje}</td></tr>`;
+        });
+
+        tabla += '</table>';
+        document.getElementById('datos').innerHTML = tabla;
+      } catch (error) {
+        console.error('Error al obtener los datos:', error);
+      }
+    }
+
+    // Cargar los datos al cargar la página
+    window.addEventListener('load', obtenerDatos);
+  </script>
+</body>
+</html>

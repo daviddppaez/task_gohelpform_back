@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Profesionales Registrados</title>
+<body>
+
+    <div class="gohelp-form">
+        <h1>gohelp</h1>
+
+        <a href="gohelp_index.html"><div class="gohelp-navform">
+            <div class="gohelp-navformanimation"></div>
+            <p>Vuelve al inicio</p>
+        </div></a>
+
+        <a href="gohelp_userform.html"><div class="gohelp-navform">
+            <div class="gohelp-navformanimation"></div>
+            <p>Ver formulario de profesionales</p>
+        </div></a>
+
+        <div id="contact_form">
+        <h2>Estos son nuestros actules profesionales</h2><br>
+        <div id="datos"></div>
+        </div>
+    </div>
+
+  <script>
+    // Función para obtener los datos desde la REST API
+    async function obtenerDatos() {
+      try {
+        const response = await fetch('http://localhost:3000/doctorform');
+        const data = await response.json();
+
+        // Generar la tabla con los datos recibidos
+        let tabla = '<table border="1">';
+        tabla += '<tr><th>Nombres</th><th>Apellidos</th><th>Consultorio</th><th>Correo</th><th>Especialidad</th></tr>';
+
+        data.forEach((registro) => {
+          tabla += `<tr><td>${registro.name}</td><td>${registro.surname}</td><td>${registro.site}</td><td>${registro.email}</td><td>${registro.think}</td></tr>`;
+        });
+
+        tabla += '</table>';
+        document.getElementById('datos').innerHTML = tabla;
+      } catch (error) {
+        console.error('Error al obtener los datos:', error);
+      }
+    }
+
+    // Cargar los datos al cargar la página
+    window.addEventListener('load', obtenerDatos);
+  </script>
+</body>
+</html>

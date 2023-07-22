@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Formulario del Paciente</title>
+</head>
+<body>
+    <div class="gohelp-form">
+
+        <h1>gohelp</h1>
+
+            <a href="gohelp_index.html"><div class="gohelp-navform">
+                <div class="gohelp-navformanimation"></div>
+                <p>Vuelve al inicio</p>
+            </div></a>
+
+            <a href="gohelp_userlist.html"><div class="gohelp-navform">
+                <div class="gohelp-navformanimation"></div>
+                <p>Ver pacientes registrados</p>
+            </div></a>
+
+    <form id="contact_form">
+
+        <h2>Formulario del Paciente</h2>
+
+        <div class="gohelp-formceld">
+        <label for="name">Nombres Completos</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <i><small>Agrega tus nombres, recuerda iniciar en mayúscula</small></i><br>
+            </div>
+
+        <div class="gohelp-formceld">        
+        <label for="surname">Apellidos Completos</label><br>
+        <input type="text" id="surname" name="surname" required><br>
+        <i><small>Agrega tus apellidos, recuerda iniciar en mayúscula</small></i><br>
+            </div>
+
+        <div class="gohelp-formceld">
+        <label for="id">Número de cédula</label><br>
+        <input type="text" id="id" name="id" required><br>
+        <i><small>Sin puntos u otro carácter especial; solo números</small></i><br>
+            </div>
+
+        <div class="gohelp-formceld">
+        <label for="age">Edad</label><br>
+        <input type="text" id="age" name="age" required><br>
+        <i><small>Solo en números, en dos cifras</small></i><br>
+            </div>
+
+        <div class="gohelp-formceld">
+        <label for="number">Número de teléfono</label><br>
+        <input type="text" id="number" name="number" required><br>
+        <i><small>Solo en números, recuerda que son 10 números, sin indicativo</small></i><br>
+            </div>
+
+        <div class="gohelp-formceld">
+        <input class="button_submit" id="button_submit" type="submit" name="action" value="Registrar Paciente">
+            </div>
+
+    </div>
+  
+    <script src="gohelp_scriptuser.js"></script>
+
+</body>
+</html>

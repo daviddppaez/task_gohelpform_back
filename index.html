@@ -1,48 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Formulario</title>
+  <title>Redirección a otra página</title>
 </head>
 <body>
-  <h1>Formulario de contacto</h1>
-  <form id="formulario">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required><br>
+  <h1>Redireccionando a otra página...</h1>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br>
-
-    <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje" required></textarea><br>
-
-    <button type="submit">Enviar</button>
-  </form>
-
+  <!-- Script para redireccionar a otra página -->
   <script>
-    document.getElementById('formulario').addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const formData = new FormData(event.target);
-      const data = {
-        nombre: formData.get('nombre'),
-        email: formData.get('email'),
-        mensaje: formData.get('mensaje')
-      };
-
-      try {
-        const response = await fetch('http://localhost:3000/formulario', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        });
-
-        const result = await response.json();
-        alert(result.message);
-      } catch (error) {
-        console.error('Error al enviar los datos del formulario:', error);
-      }
-    });
+    // Esperar 3 segundos (3000 milisegundos) antes de redireccionar
+    setTimeout(function() {
+      // Reemplaza "url_destino" con la URL de la página a la que deseas redireccionar
+      window.location.href = "gohelp_index.html";
+    }, 3000); // Redireccionará después de 3 segundos
   </script>
 </body>
 </html>
+
